@@ -1,209 +1,576 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
+<!--
+  ameliastbaker.com, phase 1 (speaker and authority site)
+
+  HERO LINE: the h1 below is the working line. Alternatives, swap by editing the h1 only:
+    1. Clinician. Founder. The behaviour behind building things that last.      (in use)
+    2. She builds the things most clinicians only talk about.
+    3. Built from zero. Acquired a second. Teaches the rest.
+    4. The occupational therapist who became a founder, and what she learned on the way.
+    5. Behaviour first. Everything else follows.
+
+  SLOTS to fill before launch, search for "SLOT:" in this file:
+    - SLOT: cancer story in Amelia's words
+    - SLOT: TEDx transcript
+    - SLOT: article links (publish the three articles, then point these at them)
+
+  RULES this file follows (see the scope doc): everything is written as built, grew, acquired or led.
+  No current operating roles, no 10 Gen Wealth, no sale, no Mensa, no pricing, no discovery calls.
+-->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coming Soon</title>
-<meta name="description" content="Something new is on the way.">
-<meta name="robots" content="noindex">
+<title>Amelia St Baker | Occupational Therapist, Co-Founder, Keynote Speaker</title>
+<meta name="description" content="Amelia St Baker is an occupational therapist who built an allied health business from zero to 40 staff, acquired an allied health business and integrated it with Ninja Allied Health, and teaches business to OT students at the University of Queensland. TEDx speaker. Keynotes on the behaviour behind building things that last.">
+<link rel="canonical" href="https://www.ameliastbaker.com/">
+
+<meta property="og:type" content="profile">
+<meta property="og:title" content="Amelia St Baker | Occupational Therapist, Co-Founder, Keynote Speaker">
+<meta property="og:description" content="Built an allied health business from zero to 40 staff, acquired an allied health business and integrated it with Ninja Allied Health, TEDx speaker, youngest person admitted to the UQ MBA. Keynotes on the behaviour behind building things that last.">
+<meta property="og:url" content="https://www.ameliastbaker.com/">
+<meta property="og:image" content="https://www.ameliastbaker.com/amelia-headshot.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Amelia St Baker",
+  "url": "https://www.ameliastbaker.com/",
+  "image": "https://www.ameliastbaker.com/amelia-headshot.jpg",
+  "jobTitle": "Occupational Therapist, Co-Founder of Ninja Allied Health and Keynote Speaker",
+  "description": "Occupational therapist who built an allied health business from zero to 40 staff, acquired an allied health business and integrated it with Ninja Allied Health, and teaches business to OT students at the University of Queensland. TEDx speaker.",
+  "alumniOf": {
+    "@type": "CollegeOrUniversity",
+    "name": "The University of Queensland"
+  },
+  "sameAs": [
+    "https://www.linkedin.com/in/ameliastbaker/",
+    "https://www.instagram.com/ameliajane.ot/",
+    "https://www.youtube.com/watch?v=GDZaxNB95lE"
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+
 <style>
-  :root {
-    --bg: #0d0c0f;
-    --bg-2: #15131a;
-    --ink: #f4f1ea;
-    --muted: #9c96a8;
-    --accent: #e8a05c;
-    --accent-soft: #c97b8f;
-    --line: rgba(244, 241, 234, 0.12);
-  }
+:root {
+  --bg: #0d0c0f;
+  --bg-2: #15131a;
+  --bg-3: #1b1821;
+  --ink: #f4f1ea;
+  --muted: #9c96a8;
+  --accent: #e8a05c;
+  --accent-soft: #c97b8f;
+  --line: rgba(244, 241, 234, 0.12);
+  --line-strong: rgba(244, 241, 234, 0.24);
+  --max: 1120px;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif;
+}
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 5rem; }
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+img { max-width: 100%; display: block; }
+a { color: var(--ink); }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
 
-  html, body { height: 100%; }
+/* atmosphere, carried over from the holding page */
+.mesh {
+  position: fixed; inset: 0; z-index: -2;
+  background:
+    radial-gradient(60% 50% at 20% 10%, rgba(232, 160, 92, 0.14), transparent 70%),
+    radial-gradient(55% 45% at 85% 90%, rgba(201, 123, 143, 0.12), transparent 70%),
+    radial-gradient(70% 60% at 50% 50%, var(--bg-2), var(--bg) 80%);
+}
+.grain {
+  position: fixed; inset: -50%; z-index: -1; opacity: 0.04; pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
 
-  body {
-    background: var(--bg);
-    color: var(--ink);
-    font-family: "Hanken Grotesk", sans-serif;
-    min-height: 100vh;
-    display: grid;
-    place-items: center;
-    position: relative;
-    overflow: hidden;
-    padding: 2rem;
-  }
+/* type scale */
+h1, h2, h3 { font-family: var(--serif); font-weight: 350; letter-spacing: -0.015em; line-height: 1.08; }
+h1 { font-size: clamp(2.6rem, 6.2vw, 4.6rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; }
+h3 { font-size: 1.5rem; font-weight: 400; line-height: 1.25; }
+h1 em, h2 em { font-style: italic; font-weight: 400; color: var(--accent); }
+p { max-width: 64ch; }
+p + p { margin-top: 1.1rem; }
+.muted { color: var(--muted); }
+.lede { font-size: clamp(1.1rem, 1.6vw, 1.3rem); line-height: 1.55; color: var(--muted); }
 
-  /* atmospheric gradient mesh */
-  .mesh {
-    position: fixed;
-    inset: 0;
-    z-index: 0;
-    background:
-      radial-gradient(60% 50% at 20% 18%, rgba(232, 160, 92, 0.18), transparent 70%),
-      radial-gradient(55% 45% at 82% 78%, rgba(201, 123, 143, 0.16), transparent 70%),
-      radial-gradient(70% 60% at 50% 50%, var(--bg-2), var(--bg) 80%);
-    animation: drift 22s ease-in-out infinite alternate;
-  }
+/* layout */
+.container { width: min(var(--max), 100% - 2.5rem); margin-inline: auto; }
+section { padding: clamp(4rem, 9vw, 7.5rem) 0; border-top: 1px solid var(--line); }
+section:first-of-type { border-top: 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: 2.5rem; align-items: start; }
+@media (min-width: 860px) {
+  .grid-2 { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 4rem; }
+  .grid-2.even { grid-template-columns: 1fr 1fr; }
+  .grid-2.hero-grid { grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); align-items: center; }
+  .grid-2.hero-grid .hero-media { justify-self: end; }
+}
 
-  @keyframes drift {
-    0%   { transform: scale(1) translate(0, 0); }
-    100% { transform: scale(1.12) translate(-2%, 1.5%); }
-  }
+/* nav */
+header {
+  position: sticky; top: 0; z-index: 10;
+  background: rgba(13, 12, 15, 0.82);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+.nav { display: flex; align-items: center; justify-content: space-between; height: 4.25rem; gap: 1rem; }
+.brand { font-family: var(--serif); font-size: 1.2rem; text-decoration: none; letter-spacing: -0.01em; }
+.nav ul { display: none; list-style: none; gap: 1.75rem; }
+.nav ul a { text-decoration: none; color: var(--muted); font-size: 0.95rem; transition: color 0.2s; }
+.nav ul a:hover { color: var(--ink); }
+@media (min-width: 760px) { .nav ul { display: flex; } }
+.nav .cta { font-size: 0.95rem; }
 
-  /* grain overlay */
-  .grain {
-    position: fixed;
-    inset: -50%;
-    z-index: 1;
-    opacity: 0.04;
-    pointer-events: none;
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-  }
+/* buttons */
+.btn {
+  display: inline-block; padding: 0.8rem 1.4rem; border-radius: 999px;
+  font-weight: 500; text-decoration: none; font-size: 0.98rem; line-height: 1;
+  border: 1px solid var(--line-strong); color: var(--ink); background: transparent;
+  cursor: pointer; font-family: var(--sans);
+  transition: background 0.2s, border-color 0.2s, color 0.2s;
+}
+.btn:hover { border-color: var(--ink); }
+.btn.primary { background: var(--accent); color: var(--bg); border-color: var(--accent); }
+.btn.primary:hover { background: #f0b273; border-color: #f0b273; }
+.btn-row { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 2rem; }
 
-  .wrap {
-    position: relative;
-    z-index: 2;
-    max-width: 640px;
-    text-align: center;
-  }
+/* hero */
+.hero { padding-top: clamp(3.5rem, 8vw, 6.5rem); }
+.hero .kicker { color: var(--muted); font-size: 1rem; margin-bottom: 1.4rem; }
+.hero h1 { margin-bottom: 1.6rem; max-width: 14ch; }
+.hero .lede { max-width: 54ch; }
+.hero-media { position: relative; }
+.hero-media { max-width: 360px; }
+.hero-media img {
+  border-radius: 12px; height: 440px; object-fit: cover; width: 100%;
+  border: 1px solid var(--line);
+}
+.hero-media figcaption { margin-top: 0.8rem; color: var(--muted); font-size: 0.9rem; }
+.logos { margin-top: clamp(2.5rem, 5vw, 4rem); padding-top: 1.75rem; border-top: 1px solid var(--line); }
+.logos-label { color: var(--muted); font-size: 0.9rem; margin-bottom: 1.25rem; }
+.logos ul { list-style: none; display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem 3rem; }
+.logos li a { display: inline-flex; align-items: center; text-decoration: none; opacity: 0.8; transition: opacity 0.2s; }
+.logos li a:hover { opacity: 1; }
+.logos img { height: 32px; width: auto; max-width: 180px; filter: brightness(0) invert(1); }
+.logos span { font-family: var(--serif); font-size: 1.25rem; color: var(--ink); white-space: nowrap; }
 
-  .eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.6rem;
-    font-size: 0.72rem;
-    letter-spacing: 0.32em;
-    text-transform: uppercase;
-    color: var(--muted);
-    margin-bottom: 2.4rem;
-    opacity: 0;
-    animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.1s forwards;
-  }
+/* story */
+.story-quote {
+  font-family: var(--serif); font-weight: 350; font-style: italic;
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem); line-height: 1.2; letter-spacing: -0.01em;
+  border-left: 2px solid var(--accent); padding-left: 1.4rem; margin: 2.5rem 0;
+  max-width: 28ch; color: var(--ink);
+}
+.numbers { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+.numbers div { border-top: 1px solid var(--line); padding-top: 1rem; }
+.numbers strong { font-family: var(--serif); font-weight: 350; font-size: clamp(1.8rem, 3.6vw, 2.6rem); display: block; line-height: 1; margin-bottom: 0.4rem; }
+.numbers span { color: var(--muted); font-size: 0.95rem; }
 
-  .dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--accent);
-    box-shadow: 0 0 12px var(--accent);
-    animation: pulse 2.4s ease-in-out infinite;
-  }
+/* photos: small, fixed size, sit under the heading in the narrow column */
+.photo { margin: 1.75rem 0 0; width: 240px; max-width: 100%; }
+.photo img { width: 240px; max-width: 100%; height: 300px; object-fit: cover; object-position: center 20%; border-radius: 10px; border: 1px solid var(--line); }
+.photo.wide, .photo.wide img { width: 100%; max-width: 420px; }
+.photo.wide img { height: 260px; object-position: center; }
+.photo figcaption { margin-top: 0.6rem; color: var(--muted); font-size: 0.85rem; max-width: 36ch; }
 
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50%      { opacity: 0.4; transform: scale(0.7); }
-  }
+/* talks */
+.talks { list-style: none; border-top: 1px solid var(--line); }
+.talks li { border-bottom: 1px solid var(--line); padding: 2rem 0; display: grid; grid-template-columns: 1fr; gap: 0.6rem 2.5rem; }
+@media (min-width: 760px) { .talks li { grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); } }
+.talks h3 { margin-bottom: 0.4rem; }
+.talks .for { color: var(--muted); font-size: 0.95rem; }
+.talks p { max-width: 58ch; }
+.aside-note { margin-top: 2.5rem; padding: 1.5rem; border: 1px dashed var(--line-strong); border-radius: 10px; color: var(--muted); font-size: 0.95rem; }
 
-  h1 {
-    font-family: "Fraunces", serif;
-    font-weight: 350;
-    font-size: clamp(2.8rem, 8vw, 5.4rem);
-    line-height: 1.02;
-    letter-spacing: -0.02em;
-    margin-bottom: 1.6rem;
-  }
+/* video */
+.video { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; border: 1px solid var(--line); background: var(--bg-3); }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+details { margin-top: 1.25rem; border-top: 1px solid var(--line); padding-top: 1rem; }
+summary { cursor: pointer; color: var(--muted); }
+summary:hover { color: var(--ink); }
+details p { margin-top: 1rem; color: var(--muted); }
 
-  h1 em {
-    font-style: italic;
-    color: var(--accent);
-    font-weight: 400;
-  }
+/* teaching */
+.curriculum { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem 2rem; margin: 1.5rem 0 2rem; color: var(--muted); }
+.curriculum li::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); margin-right: 0.7rem; vertical-align: middle; }
 
-  h1 .line {
-    display: block;
-    overflow: hidden;
-  }
+/* writing */
+.articles { list-style: none; display: grid; grid-template-columns: 1fr; gap: 1.5rem; }
+@media (min-width: 760px) { .articles { grid-template-columns: repeat(3, 1fr); } }
+.articles li { border-top: 1px solid var(--line); padding-top: 1.25rem; }
+.articles h3 { font-size: 1.3rem; margin-bottom: 0.6rem; }
+.articles a { text-decoration: none; }
+.articles a:hover h3 { color: var(--accent); }
+.articles p { color: var(--muted); font-size: 0.98rem; }
+.articles .soon { font-size: 0.85rem; color: var(--accent); display: block; margin-top: 0.8rem; }
 
-  h1 .line > span {
-    display: block;
-    transform: translateY(110%);
-    animation: rise 1s cubic-bezier(0.2, 0.7, 0.2, 1) forwards;
-  }
+/* media */
+.bios details { border-top: 0; padding-top: 0; margin-top: 0; border-bottom: 1px solid var(--line); padding: 1.1rem 0; }
+.bios details p { color: var(--ink); }
+.media-links { list-style: none; margin-top: 2rem; display: grid; gap: 0.6rem; }
+.media-links a { color: var(--muted); }
+.media-links a:hover { color: var(--ink); }
 
-  h1 .line:nth-child(1) > span { animation-delay: 0.25s; }
-  h1 .line:nth-child(2) > span { animation-delay: 0.4s; }
+/* contact */
+form { display: grid; gap: 1.1rem; max-width: 36rem; }
+label { display: grid; gap: 0.4rem; font-size: 0.95rem; color: var(--muted); }
+input, select, textarea {
+  width: 100%; background: var(--bg-3); border: 1px solid var(--line-strong); border-radius: 8px;
+  color: var(--ink); padding: 0.75rem 0.9rem; font: inherit; font-size: 1rem;
+}
+textarea { min-height: 7rem; resize: vertical; }
+.check { display: flex; gap: 0.7rem; align-items: flex-start; color: var(--muted); font-size: 0.95rem; }
+.check input { width: auto; margin-top: 0.3rem; }
+.row-2 { display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
+@media (min-width: 560px) { .row-2 { grid-template-columns: 1fr 1fr; } }
+.form-note { color: var(--muted); font-size: 0.9rem; }
 
-  @keyframes rise {
-    to { transform: translateY(0); opacity: 1; }
-  }
+/* footer */
+footer { border-top: 1px solid var(--line); padding: 3rem 0 3.5rem; color: var(--muted); font-size: 0.92rem; }
+footer .cols { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem 3rem; }
+footer ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1.5rem; }
+footer a { color: var(--muted); text-decoration: none; }
+footer a:hover { color: var(--ink); }
 
-  p.lede {
-    font-size: clamp(1rem, 2.4vw, 1.15rem);
-    line-height: 1.6;
-    color: var(--muted);
-    max-width: 46ch;
-    margin: 0 auto 2.8rem;
-    opacity: 0;
-    animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.6s forwards;
-  }
-
-  .rule {
-    width: 64px;
-    height: 1px;
-    background: var(--line);
-    margin: 0 auto 2.8rem;
-    transform: scaleX(0);
-    transform-origin: center;
-    animation: grow 1s ease 0.7s forwards;
-  }
-
-  @keyframes grow { to { transform: scaleX(1); } }
-
-  .footer {
-    font-size: 0.8rem;
-    letter-spacing: 0.04em;
-    color: var(--muted);
-    opacity: 0;
-    animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) 0.85s forwards;
-  }
-
-  .footer a {
-    color: var(--ink);
-    text-decoration: none;
-    border-bottom: 1px solid var(--line);
-    padding-bottom: 2px;
-    transition: border-color 0.3s ease, color 0.3s ease;
-  }
-
-  .footer a:hover {
-    color: var(--accent);
-    border-color: var(--accent);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation: none !important;
-      opacity: 1 !important;
-      transform: none !important;
-    }
-  }
+/* one page load moment only */
+.hero > .container > * { opacity: 0; transform: translateY(14px); animation: rise 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) forwards; }
+.hero > .container > *:nth-child(2) { animation-delay: 0.15s; }
+@keyframes rise { to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; opacity: 1 !important; transform: none !important; transition: none !important; }
+  html { scroll-behavior: auto; }
+}
 </style>
 </head>
+
 <body>
-  <div class="mesh"></div>
-  <div class="grain"></div>
+<div class="mesh" aria-hidden="true"></div>
+<div class="grain" aria-hidden="true"></div>
 
-  <main class="wrap">
-    <span class="eyebrow"><span class="dot"></span>Work in progress</span>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#top">Amelia St Baker</a>
+    <ul>
+      <li><a href="#story">Story</a></li>
+      <li><a href="#speaking">Speaking</a></li>
+      <li><a href="#teaching">Teaching</a></li>
+      <li><a href="#writing">Writing</a></li>
+      <li><a href="#media">Media</a></li>
+    </ul>
+    <a class="btn cta" href="#contact">Enquire about a keynote</a>
+  </div>
+</header>
 
-    <h1>
-      <span class="line"><span>Something new</span></span>
-      <span class="line"><span>is <em>on the way</em></span></span>
-    </h1>
+<main id="top">
 
-    <div class="rule"></div>
+<!-- HERO -->
+<section class="hero">
+  <div class="container">
+    <div class="grid-2 hero-grid">
+      <div>
+        <p class="kicker">Occupational therapist, Co-Founder, keynote speaker</p>
+        <h1>Clinician. Founder. The behaviour behind building <em>things that last.</em></h1>
+        <p class="lede">Amelia St Baker built an allied health business from zero to 40 staff in under two years, acquired an allied health business and integrated it with Ninja Allied Health, and now teaches business to the next generation of occupational therapists at the University of Queensland. She speaks about what that took, and what most people get wrong about it.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="#contact">Enquire about a keynote</a>
+          <a class="btn" href="#tedx">Watch the TEDx talk</a>
+        </div>
+      </div>
+      <figure class="hero-media">
+                <img src="amelia-headshot.jpg" alt="Amelia St Baker" width="800" height="1000">
+      </figure>
+    </div>
 
-    <p class="lede">
-      We're putting the finishing touches on a refreshed experience.
-      Check back shortly &mdash; it'll be worth the wait.
-    </p>
+    <!-- LOGOS: drop the official files into a /logos folder in the repo with these exact names.
+         Use each organisation's own media kit file (UQ brand hub, Business News Australia, InDaily, and the TEDx event's speaker assets).
+         Until a file is present, the name shows as text so the row never looks broken. -->
+    <div class="logos" aria-label="Featured and recognised by">
+      <p class="logos-label">Featured and recognised by</p>
+      <ul>
+        <li><a href="https://www.uq.edu.au/"><img src="logos/uq.svg" alt="The University of Queensland" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'The University of Queensland'}))"></a></li>
+        <li><a href="https://www.youtube.com/watch?v=GDZaxNB95lE"><img src="logos/tedx.svg" alt="TEDx" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'TEDx'}))"></a></li>
+        <li><a href="https://www.businessnewsaustralia.com/articles/how-being-dismissed-by-doctors-shaped-ninja-allied-health.html"><img src="logos/business-news-australia.svg" alt="Business News Australia" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'Business News Australia'}))"></a></li>
+        <li><a href="https://www.indaily.com.au/"><img src="logos/indaily.svg" alt="InDaily 40 Under 40" onerror="this.replaceWith(Object.assign(document.createElement('span'),{textContent:'InDaily 40 Under 40'}))"></a></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <p class="footer">
-      Questions? <a href="mailto:amelia@ninjaalliedhealth.com">Get in touch</a>
-    </p>
-  </main>
+<!-- STORY -->
+<section id="story">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h2>She found her own cancer before anyone else thought to look.</h2>
+        <figure class="photo">
+          <img src="amelia-40under40.jpg" alt="Amelia St Baker named in the InDaily 40 Under 40, shown on screen at the awards night" width="1280" height="1707" loading="lazy">
+          <figcaption>InDaily 40 Under 40, as Co-Founder and CEO of Ninja Allied Health at the time.</figcaption>
+        </figure>
+      </div>
+      <div>
+        <p>As a teenager Amelia was unwell for years and told, repeatedly, that nothing was wrong. One diagnosis was narcolepsy. It took studying anatomy for her occupational therapy degree to notice what her doctors had not, and then convincing her own doctor to order the test. At twenty she was diagnosed with thyroid cancer.</p>
+        <p>She still manages the effects. More than anything, the experience taught her to trust what she could see when nobody else would name it. That habit runs through everything she has built since.</p>
+        <!-- SLOT: cancer story in Amelia's words, around 300 words, replaces or extends the two paragraphs above -->
+
+        <blockquote class="story-quote">The people who build things that last are the ones who notice what everyone else walks past.</blockquote>
+
+        <p>She qualified as an occupational therapist and, within a few years, Co-Founded Ninja Allied Health. Starting with nothing, she grew it to more than 40 staff in under two years, delivering over ten thousand hours of therapy in its first year while committing more than a thousand hours of free care annually to people who could not access funding. Along the way she pioneered 3D printed, low tech assistive technology designed around how clients actually grip, reach and move, and extended reality care for regional and remote clients.</p>
+        <p>In 2026 she acquired a second allied health business, the Redlands Children's Therapy Centre, and integrated it with Ninja Allied Health. She completed her MBA at the University of Queensland as the youngest person ever admitted, received the Envisage Technology Data Analytics and Technology Excellence Prize, spent two years on the Queensland Government Innovation Advisory Council, and in 2025 published a social storybook for children on confidence and emotional regulation.</p>
+
+        <div class="numbers">
+          <div><strong>40+</strong><span>staff built from zero in under two years</span></div>
+          <div><strong>10,000+</strong><span>therapy hours delivered in year one</span></div>
+          <div><strong>1,000+</strong><span>free therapy hours given each year</span></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPEAKING -->
+<section id="speaking">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h2>Keynotes for rooms that want the real version.</h2>
+        <p class="muted">Amelia speaks at a small number of events each year: health and allied health conferences, universities, industry bodies and leadership programmes. Every talk is built from what she has done, not what she has read.</p>
+        <div class="btn-row">
+          <a class="btn primary" href="mailto:admin@ninjaalliedhealth.com?subject=Keynote%20enquiry">Contact Amelia's team</a>
+        </div>
+        <figure class="photo">
+          <img src="amelia-speaking.jpg" alt="Amelia St Baker speaking on stage with a microphone" width="1280" height="1920" loading="lazy">
+        </figure>
+      </div>
+      <div>
+        <ul class="talks">
+          <li>
+            <div>
+              <h3>The behaviour behind building</h3>
+              <p class="for">Business and leadership events, founder programmes</p>
+            </div>
+            <p>What growing a 40 person health business from nothing taught Amelia about the habits that outlast the founder. The decisions that compounded, the ones that nearly broke it, and the behaviours she now looks for before she backs anything.</p>
+          </li>
+          <li>
+            <div>
+              <h3>From clinician to founder</h3>
+              <p class="for">Health conferences, universities, industry bodies</p>
+            </div>
+            <p>The business skills clinicians are never taught and pay for later. Funding reality in Australian allied health, pricing care without losing the point of it, and what Amelia now teaches to OT students at the University of Queensland.</p>
+          </li>
+          <li>
+            <div>
+              <h3>Low tech, high impact</h3>
+              <p class="for">Occupational therapy, allied health and health technology audiences</p>
+            </div>
+            <p>What 3D printed and low tech assistive technology changed for her clients, and why the most expensive device is rarely the best one. Clinical reasoning first, then the print and test loop that turned it into something repeatable.</p>
+          </li>
+          <li>
+            <div>
+              <h3>Priming your subconscious</h3>
+              <p class="for">Leadership events, universities, health and wellbeing programmes</p>
+            </div>
+            <p>The TEDx talk, brought into the room. The science behind training your attention to see what others miss, anchored in the experience of finding her own cancer when nobody else was looking, and how the same mechanism shapes leadership and performance.</p>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEDX -->
+<section id="tedx">
+  <div class="container">
+    <div class="grid-2 even">
+      <div>
+        <h2>The talk that started the conversation.</h2>
+        <p class="muted">Priming Your Subconscious: Your Key to Success. Amelia's talk at TEDxYouth@SomervilleHouse on the science and lived experience of training your mind to notice what matters, delivered by someone who had to do exactly that to find her own diagnosis.</p>
+        <figure class="photo wide">
+          <img src="amelia-tedx.jpg" alt="Amelia St Baker on stage at TEDxYouth@SomervilleHouse, delivering Priming Your Subconscious" width="1359" height="950" loading="lazy">
+        </figure>
+      </div>
+      <div>
+        <div class="video">
+          <iframe src="https://www.youtube-nocookie.com/embed/GDZaxNB95lE" title="Priming Your Subconscious: Your Key to Success, Amelia St Baker TEDx talk" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <details>
+          <summary>Read the transcript</summary>
+          <!-- SLOT: TEDx transcript. On YouTube: open the video, click the three dots under it (or "...more" in the description), choose "Show transcript", then copy the text. Paste it here as paragraphs. -->
+          <p>Transcript coming.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEACHING -->
+<section id="teaching">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h2>Teaching OTs the part of the job nobody warned them about.</h2>
+      </div>
+      <div>
+        <p>Amelia is a guest lecturer in occupational therapy at the University of Queensland, teaching business to undergraduate and masters students. The curriculum is the one she wishes she had been given.</p>
+        <ul class="curriculum">
+          <li>Business Model Canvas</li>
+          <li>Value Proposition Canvas</li>
+          <li>Cost benefit analysis and ROI</li>
+          <li>The Australian OT funding landscape</li>
+          <li>Marketing strategy for clinicians</li>
+          <li>AHPRA compliant promotion</li>
+        </ul>
+        <p>The point is not to turn clinicians into accountants. It is to give them the literacy to advocate harder for clients, negotiate with funders and employers from a position of understanding, and make the profession more visible and better run.</p>
+        <p>Amelia also works with a small number of clinician founders. If that is you, say so in the form below and she will be in touch when there is room.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WRITING -->
+<section id="writing">
+  <div class="container">
+    <h2>Writing and press</h2>
+    <ul class="articles">
+      <li><a href="https://www.businessnewsaustralia.com/articles/how-being-dismissed-by-doctors-shaped-ninja-allied-health.html"><h3>How being dismissed by doctors shaped Ninja Allied Health</h3><p>Amelia's story and the business it produced, as told to Business News Australia.</p><span class="soon">Business News Australia</span></a></li>
+      <!-- SLOT: article links. Point each href below at the published article -->
+      <li><a href="#writing"><h3>3D printed assistive technology in OT practice: what works and what does not</h3><p>Clinical reasoning for low tech aids, from grip and reach assessment to the print and test loop, and the cases where a simple object beat an expensive device.</p><span class="soon">Coming soon</span></a></li>
+      <li><a href="#writing"><h3>The business skills OTs are never taught</h3><p>What a clinician needs to understand about funding, pricing and promotion before it costs them, drawn from the course Amelia teaches at UQ.</p><span class="soon">Coming soon</span></a></li>
+      <li><a href="#writing"><h3>Priming your subconscious: what the TEDx talk did not have time to say</h3><p>The longer version of the mechanism behind the talk, and how to apply it when the stakes are your own body, your own business or your own team.</p><span class="soon">Coming soon</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<!-- MEDIA -->
+<section id="media">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h2>Media</h2>
+        <p class="muted">Bios in three lengths, a headshot and a direct line. For interviews, podcasts and panels write to <a href="mailto:admin@ninjaalliedhealth.com">admin@ninjaalliedhealth.com</a>.</p>
+        <ul class="media-links">
+          <li><a href="amelia-headshot.jpg" download>Download headshot</a></li>
+          <li><a href="https://www.linkedin.com/in/ameliastbaker/">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/ameliajane.ot/">Instagram</a></li>
+        </ul>
+      </div>
+      <div class="bios">
+        <details open>
+          <summary>Short bio, 50 words</summary>
+          <p>Amelia St Baker is an occupational therapist, Co-Founder of Ninja Allied Health and TEDx speaker. She built an allied health business from zero to 40 staff in under two years, acquired an allied health business and integrated it with Ninja Allied Health, and teaches business to OT students at the University of Queensland, where she was the youngest person ever admitted to the MBA.</p>
+        </details>
+        <details>
+          <summary>Medium bio, 150 words</summary>
+          <p>Amelia St Baker is an award winning occupational therapist, Co-Founder of Ninja Allied Health and keynote speaker. She Co-Founded Ninja Allied Health and grew it from nothing to more than 40 staff in under two years, delivering over ten thousand hours of therapy in its first year while giving more than a thousand hours of free care annually to people who could not access funding. She pioneered 3D printed, low tech assistive technology for OT clients and in 2026 acquired an allied health business, the Redlands Children's Therapy Centre, and integrated it with Ninja Allied Health.</p>
+          <p>Amelia completed her MBA at the University of Queensland as the youngest person ever admitted, served two years on the Queensland Government Innovation Advisory Council, and was named in the InDaily 40 Under 40. She is a guest lecturer in business for OT students at UQ. Her TEDx talk, Priming Your Subconscious, draws on finding her own cancer at twenty after years of being told nothing was wrong.</p>
+        </details>
+        <details>
+          <summary>Long bio, 300 words</summary>
+          <p>Amelia St Baker is an award winning occupational therapist, founder and keynote speaker whose work sits where clinical care meets the business of delivering it.</p>
+          <p>She Co-Founded Ninja Allied Health and grew it from zero to more than 40 staff in under two years. In its first year the organisation delivered over ten thousand hours of therapy, while committing more than a thousand hours of free care annually to people who could not access funding. Amelia pioneered 3D printed, low tech assistive technology designed around how clients actually grip, reach and move, and extended reality care for regional and remote clients. In 2026 she acquired a second allied health business, the Redlands Children's Therapy Centre, a multidisciplinary clinic supporting children and families across South East Queensland, and integrated it with Ninja Allied Health.</p>
+          <p>She completed her MBA at the University of Queensland as the youngest person ever admitted, received the Envisage Technology Data Analytics and Technology Excellence Prize, served two years on the Queensland Government Innovation Advisory Council advising on innovation strategy and emerging technology, and was named in the InDaily 40 Under 40. In 2025 she published a social storybook for children on confidence and emotional regulation.</p>
+          <p>Amelia is a guest lecturer in occupational therapy at UQ, teaching business to undergraduate and masters students: business models, funding, cost benefit analysis, marketing and AHPRA compliant promotion.</p>
+          <p>Her drive is personal. After years of being told nothing was wrong, she found her own thyroid cancer at twenty while studying anatomy for her OT degree, and continues to manage its effects. That experience, and the habit of trusting what she could see, is the thread through her TEDx talk, Priming Your Subconscious: Your Key to Success, and through every keynote she gives on the behaviour behind building things that last.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="grid-2">
+      <div>
+        <h2>Enquire about a keynote.</h2>
+        <p class="muted">Tell Amelia's team about the event and someone will reply within two working days. If you would rather email, write to <a href="mailto:admin@ninjaalliedhealth.com">admin@ninjaalliedhealth.com</a>.</p>
+      </div>
+      <div>
+        <!-- Form delivery: FormSubmit sends each enquiry to admin@ninjaalliedhealth.com. No account needed.
+             First submission after launch triggers a one time activation email to that inbox; click the link in it once and every enquiry after that is delivered. -->
+        <form action="https://formsubmit.co/admin@ninjaalliedhealth.com" method="POST">
+          <input type="hidden" name="_subject" value="Keynote enquiry from ameliastbaker.com">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://www.ameliastbaker.com/?sent=1#contact">
+          <div class="row-2">
+            <label>Your name <input type="text" name="name" required autocomplete="name"></label>
+            <label>Email <input type="email" name="email" required autocomplete="email"></label>
+          </div>
+          <label>Organisation <input type="text" name="organisation" autocomplete="organization"></label>
+          <div class="row-2">
+            <label>Event name <input type="text" name="event"></label>
+            <label>Event date <input type="text" name="date" placeholder="Month and year is fine"></label>
+          </div>
+          <div class="row-2">
+            <label>Audience size
+              <select name="audience_size">
+                <option value="">Select</option>
+                <option>Under 50</option>
+                <option>50 to 200</option>
+                <option>200 to 500</option>
+                <option>500 or more</option>
+              </select>
+            </label>
+            <label>Format
+              <select name="format">
+                <option value="">Select</option>
+                <option>Keynote</option>
+                <option>Panel</option>
+                <option>Workshop</option>
+                <option>Not sure yet</option>
+              </select>
+            </label>
+          </div>
+          <label>Anything else <textarea name="message" placeholder="The audience, the theme, what you want them to leave with"></textarea></label>
+          <label class="check"><input type="checkbox" name="clinician_founder" value="yes"> I am a clinician founder and interested in working with Amelia beyond a talk</label>
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+          <div>
+            <button class="btn primary" type="submit">Send enquiry</button>
+          </div>
+          <p class="form-note">Enquiries go to Amelia's team. Nothing is shared or added to a list.</p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container cols">
+    <div>
+      <p>Amelia St Baker. Occupational therapist, Co-Founder, keynote speaker.</p>
+      <p class="muted">Brisbane, Australia. Available to speak nationally and internationally.</p>
+    </div>
+    <ul>
+      <li><a href="mailto:admin@ninjaalliedhealth.com">admin@ninjaalliedhealth.com</a></li>
+      <li><a href="https://www.linkedin.com/in/ameliastbaker/">LinkedIn</a></li>
+      <li><a href="https://www.instagram.com/ameliajane.ot/">Instagram</a></li>
+    </ul>
+  </div>
+</footer>
+
 </body>
 </html>
